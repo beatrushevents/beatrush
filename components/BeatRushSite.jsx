@@ -4,6 +4,11 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const GOLD = '#D4AF37';
 const TEAL = '#67E8F9';
+const FATSOMA_URL = 'https://www.fatsoma.com/p/beatrush-events';
+const INSTAGRAM_URL = 'https://www.instagram.com/beatrush_events?igsh=aXR1YXEwYjl1YzRn&utm_source=qr';
+const TIKTOK_URL = 'https://www.tiktok.com/@beatrush_events?_r=1&_t=ZN-96YU7NZtHte';
+const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61587153658510';
+const X_URL = 'https://x.com/beatrushevents?s=21';
 
 const Bolt = ({ className = '', glow = false }) => (
   <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true" style={glow ? { filter: 'drop-shadow(0 0 36px rgba(212, 175, 55, 0.55)) drop-shadow(0 0 12px rgba(212, 175, 55, 0.45))' } : {}}>
@@ -53,9 +58,9 @@ const pastEvents = [
     title: 'Thara Local',
     year: '2025',
     tag: 'Launch night',
-    image: '/thara-local.jpeg',
-    highlight: 'The launch night that started the BeatRush movement. Thara Local brought Tamil, Malayalam and Telugu energy into one room at Colours Hoxton with DJ Roxzstar, sponsor support and a crowd that made our first event feel like a proper statement.',
-    photos: ['/thara-local.jpeg', null, null, null, null, null],
+    image: 'thara-local.jpeg',
+    highlight: 'The launch night that started the BeatRush movement.  Local brought Tamil, Malayalam and Telugu energy into one room at Colours Hoxton with DJ Roxzstar, sponsor support and a crowd that made our first event feel like a proper statement.',
+    photos: ['/Thara-local.jpeg', '/IMG_3806.PNG', '/IMG_3768.PNG', '/IMG_3803.PNG', '/IMG_3807.PNG', '/IMG_3813.PNG', '/IMG_3800.PNG', '/IMG_3812.PNG', '/IMG_3791.PNG', '/IMG_3785.PNG', '/IMG_3782.jpeg', '/IMG_3809.PNG', '/IMG_3810.PNG', '/IMG_3801.PNG', '/IMG_3814.PNG', '/IMG_3811.PNG', '/IMG_3783.PNG'],
   },
   {
     title: 'Jolly O Gymkhana',
@@ -63,7 +68,7 @@ const pastEvents = [
     tag: 'Neon party',
     image: '/jolly-o-gymkhana.jpeg',
     highlight: 'Our ultimate neon night at The Cause London. Jolly O Gymkhana took the BeatRush crowd into a UV, glow and high energy club experience with DJ Roxzstar and DJ Julia delivering a full Tamil and Malayalam night.',
-    photos: ['/jolly-o-gymkhana.jpeg', null, null, null, null, null],
+    photos: ['/jolly-o-gymkhana.jpeg', '/File 1.JPEG', '/File 38.JPEG', '/File 4.JPG', '/File 35.JPEG', '/File 5.JPG', '/File 6.JPEG', '/File 10.JPEG', '/File 11.JPEG', '/File 12.JPEG', '/File 13.JPEG', '/File 38.JPEG', '/File 14.JPEG', '/File 15.JPEG', '/File 16.JPEG', '/File 17.JPEG', '/File 18.JPEG', '/File 8.JPEG', '/File 19.JPEG', '/File 20.JPEG', '/File 21.JPEG', '/File 7.JPEG', '/File 2.JPEG', '/File 22.JPEG', '/File 23.JPEG', '/File 24.JPEG', '/File 25.JPEG', '/File 3.JPEG', '/File 26.JPEG', '/File 9.JPEG', '/File 27.JPEG', '/File 28.JPEG', '/File 29.JPEG', '/File 30.JPEG', '/File 37.JPEG', '/File 31.JPEG', '/File 32.JPEG', '/File 33.JPEG', '/File 34.JPEG', '/File 36.JPEG',],
   },
   {
     title: 'Holiday Hangover',
@@ -71,7 +76,7 @@ const pastEvents = [
     tag: 'Boxing Day special',
     image: '/holiday-hangover.jpeg',
     highlight: 'Our Boxing Day Christmas crossover at Brixton Jamm. Holiday Hangover brought festive chaos, Tamil and Malayalam club energy, sponsor visibility and one of our strongest end of year crowds.',
-    photos: ['/holiday-hangover.jpeg', null, null, null, null, null],
+    photos: ['/holiday-hangover.jpeg', '/File 52.jpg', '/File 41.JPEG', '/File 63.JPEG', '/File 47.JPEG', '/File 58.jpg', '/File 44.JPEG', '/File 66.JPEG', '/File 50.jpg', '/File 61.JPEG', '/File 43.JPEG', '/File 67.JPEG', '/File 55.jpg', '/File 46.JPEG', '/File 64.JPEG', '/File 49.JPEG', '/File 57.jpg', '/File 42.JPEG', '/File 65.JPEG', '/File 53.jpg', '/File 62.JPEG', '/File 48.JPEG', '/File 56.jpg', '/File 45.JPEG', '/File 60.jpeg', '/File 51.jpg', '/File 54.jpg', '/File 59.jpg'],
   },
   {
     title: 'Love You Two',
@@ -79,7 +84,7 @@ const pastEvents = [
     tag: 'Valentine special',
     image: '/love-you-two.jpeg',
     highlight: 'Our Valentine special at Egg London. Love You Two was not just a couples night, it featured the first ever live surprise moment inside a DJ club event in London, creating a proper emotional BeatRush memory.',
-    photos: ['/love-you-two.jpeg', null, null, null, null, null],
+    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpg', '/File 85.jpg', '/File 77.jpg', '/File 94.jpg', '/File 72.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
   },
   {
     title: 'Thames Kacheri',
@@ -87,7 +92,7 @@ const pastEvents = [
     tag: 'Neon boat party',
     image: '/thames-kacheri.jpeg',
     highlight: 'London’s first South Indian neon boat party. The first boat sold out, demand pushed us to add a second boat, and BeatRush became the first London promoter to host two boats for the same South Indian event with 600+ people across the Thames.',
-    photos: ['/thames-kacheri.jpeg', null, null, null, null, null],
+    photos: ['/thames-kacheri.jpeg', '/File 104.JPEG', '/File 117.JPEG', '/File 101.JPEG', '/File 129.JPEG', '/File 110.JPEG', '/File 123.JPEG', '/File 106.JPEG', '/File 132.JPEG', '/File 115.JPEG', '/File 100.JPEG', '/File 126.JPEG', '/File 108.JPEG', '/File 120.JPEG', '/File 103.JPEG', '/File 131.JPEG', '/File 112.JPEG', '/File 124.JPEG', '/File 107.JPEG', '/File 119.JPEG', '/File 102.JPEG', '/File 128.JPEG', '/File 111.JPEG', '/File 121.JPEG', '/File 105.JPEG', '/File 130.JPEG', '/File 114.JPEG', '/File 125.JPEG', '/File 109.JPEG', '/File 122.JPEG', '/File 116.JPEG', '/File 127.JPEG', '/File 113.JPEG', '/File 118.JPEG'],
   },
 ];
 
@@ -150,14 +155,14 @@ export default function BeatRushSite() {
 
         <nav className="relative z-30 flex items-center justify-between px-5 md:px-10 lg:px-14 py-5 fade-up delay-1">
           <a href="#home" className="flex items-center gap-3">
-            <img src="/beatrush-logo.jpeg" alt="BeatRush Events" className="brand-logo h-10 md:h-12 w-auto object-contain" />
+            <img loading="lazy" src="/beatrush-logo.jpeg" alt="BeatRush Events" className="brand-logo h-10 md:h-12 w-auto object-contain" />
           </a>
-          <div className="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl px-2 py-1.5">
+          <div className="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04]  px-2 py-1.5">
             {['Home', 'About Us', 'Upcoming Events', 'Past Events', 'Contact'].map((item) => (
               <a key={item} href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="px-4 py-2 text-[13px] rounded-full text-white/65 hover:text-white hover:bg-white/[0.06] transition-all">{item}</a>
             ))}
           </div>
-          <a href="#upcoming-events" className="rounded-full bg-white text-black px-5 md:px-6 py-2.5 text-[12px] tracking-[0.12em] uppercase font-semibold hover:bg-white/90 transition-all">Book Now</a>
+          <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="rounded-full bg-white text-black px-5 md:px-6 py-2.5 text-[12px] tracking-[0.12em] uppercase font-semibold hover:bg-white/90 transition-all">Book Now</a>
         </nav>
 
         <div className="absolute inset-0 z-10 sky-flash bg-white pointer-events-none" />
@@ -172,7 +177,7 @@ export default function BeatRushSite() {
             South Indian club nights, cinematic production, viral crowd energy and events that feel like home, but louder.
           </p>
           <div className="fade-up delay-4 mt-9 flex flex-col sm:flex-row items-start justify-center gap-4">
-            <a href="#upcoming-events" className="rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold hover:scale-[1.03] transition-all">Upcoming Event</a>
+            <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold hover:scale-[1.03] transition-all">Book Now</a>
             <a href="#past-events" className="rounded-full border border-white/15 px-8 py-3 text-[12px] tracking-[0.18em] uppercase text-white/75 hover:text-white hover:border-white/40 transition-all">Past Events</a>
           </div>
         </div>
@@ -224,7 +229,7 @@ export default function BeatRushSite() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 md:gap-5">
             {pastEvents.map((event, index) => (
               <button key={event.title} onClick={() => setSelectedEvent(event)} className={`event-card reveal ${eventsInView ? 'in' : ''} group text-left relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] min-h-[390px] hover:border-white/30 transition-all`} style={{ transitionDelay: `${index * .08}s` }}>
-                {event.image ? <img src={event.image} alt={event.title} className="event-photo absolute inset-0 h-full w-full object-cover opacity-70" /> : <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 90% 70% at 50% 20%, rgba(212,175,55,.22), transparent 58%), linear-gradient(180deg,#111,#030303)` }} />}
+                {event.image ? <img loading="lazy" src={event.image} alt={event.title} className="event-photo absolute inset-0 h-full w-full object-cover opacity-70" /> : <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 90% 70% at 50% 20%, rgba(212,175,55,.22), transparent 58%), linear-gradient(180deg,#111,#030303)` }} />}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/10" />
                 <div className="absolute top-5 left-5 rounded-full border border-white/15 bg-black/35 px-3 py-1 text-[10px] tracking-[0.25em] uppercase text-white/65">{event.year}</div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
@@ -250,29 +255,45 @@ export default function BeatRushSite() {
               <p><span style={{ color: GOLD }}>Time:</span> 11PM onwards</p>
               <p><span style={{ color: GOLD }}>Venue:</span> Brixton Jamm, 261 Brixton Road, London SW9 6LH</p>
             </div>
-            <a href="#contact" className="inline-block mt-8 rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold">Book Your Tickets</a>
+            <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="inline-block mt-8 rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold">Book Your Tickets</a>
           </div>
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03]">
-            <img src="/thala-thalapathy.jpeg" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
+            <img loading="lazy" src="/thala-thalapathy.jpeg" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
           </div>
         </div>
       </section>
 
       <section id="contact" className="relative bg-black px-6 md:px-10 lg:px-14 py-20 border-t border-white/10 text-center">
-        <img src="/beatrush-logo.jpeg" alt="BeatRush Events" className="brand-logo mx-auto h-16 w-auto object-contain mb-6" />
+        <img loading="lazy" src="/beatrush-logo.jpeg" alt="BeatRush Events" className="brand-logo mx-auto h-16 w-auto object-contain mb-6" />
         <p className="text-[11px] tracking-[0.5em] uppercase mb-3" style={{ color: GOLD }}>Contact BeatRush</p>
         <h2 className="text-white mb-10" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>LET’S CREATE HISTORY</h2>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-          <a href="https://www.instagram.com/beatrush_events?igsh=aXR1YXEwYjl1YzRn&utm_source=qr" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
             <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>Instagram</p>
             <p className="text-white text-lg">@beatrush_events</p>
+          </a>
+          <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
+            <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>TikTok</p>
+            <p className="text-white text-lg">@beatrush_events</p>
+          </a>
+          <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
+            <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>Facebook</p>
+            <p className="text-white text-lg">BeatRush Events</p>
+          </a>
+          <a href={X_URL} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
+            <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>X</p>
+            <p className="text-white text-lg">@beatrushevents</p>
+          </a>
+          <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
+            <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>Fatsoma</p>
+            <p className="text-white text-lg">Book tickets</p>
           </a>
           <a href="https://wa.me/447442114834" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
             <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>WhatsApp</p>
             <p className="text-white text-lg">+44 7442 114834</p>
             <p className="text-white text-lg">+44 7949 350287</p>
           </a>
-          <a href="mailto:beatrushevents@gmail.com" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all">
+          <a href="mailto:beatrushevents@gmail.com" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/30 transition-all lg:col-span-2">
             <p className="text-[11px] tracking-[0.32em] uppercase mb-3" style={{ color: GOLD }}>Email</p>
             <p className="text-white text-lg break-all">beatrushevents@gmail.com</p>
           </a>
@@ -280,10 +301,10 @@ export default function BeatRushSite() {
       </section>
 
       {selectedEvent && (
-        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl overflow-y-auto px-4 py-8 md:p-10">
+        <div className="fixed inset-0 z-50 bg-black/85  overflow-y-auto px-4 py-8 md:p-10">
           <div className="max-w-6xl mx-auto rounded-[2rem] border border-white/10 bg-[#050505] overflow-hidden">
             <div className="relative min-h-[280px] md:min-h-[380px] p-6 md:p-10 flex items-end">
-              {selectedEvent.image ? <img src={selectedEvent.image} alt={selectedEvent.title} className="absolute inset-0 h-full w-full object-cover opacity-45" /> : <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 80% 65% at 50% 20%, rgba(212,175,55,.25), transparent 60%), #050505` }} />}
+              {selectedEvent.image ? <img loading="lazy" src={selectedEvent.image} alt={selectedEvent.title} className="absolute inset-0 h-full w-full object-cover opacity-45" /> : <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 80% 65% at 50% 20%, rgba(212,175,55,.25), transparent 60%), #050505` }} />}
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/40 to-black/20" />
               <button onClick={() => setSelectedEvent(null)} className="absolute right-5 top-5 h-11 w-11 rounded-full bg-white text-black text-xl">×</button>
               <div className="relative z-10">
@@ -295,12 +316,11 @@ export default function BeatRushSite() {
               <div className="lg:col-span-1">
                 <h3 className="text-white text-2xl mb-4" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic' }}>EVENT HIGHLIGHTS</h3>
                 <p className="text-white/65 text-[14px] leading-[1.8]">{selectedEvent.highlight}</p>
-                <p className="mt-6 text-white/35 text-[12px] leading-relaxed">Edit this text in the event data to add your final attendance, venue, DJ names, sponsor mentions and best moments.</p>
               </div>
               <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {selectedEvent.photos.map((photo, i) => photo ? (
-                  <button key={i} onClick={() => setSelectedPhoto({ src: photo, alt: `${selectedEvent.title} ${i + 1}` })} className="group relative overflow-hidden rounded-2xl border border-white/10 text-left">
-                    <img src={photo} alt={`${selectedEvent.title} ${i + 1}`} className="h-[210px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <button key={i} onClick={() => setSelectedPhoto({ src: photo, alt: `${selectedEvent.title} ${i + 1}`, index: i, photos: selectedEvent.photos.filter(Boolean), eventTitle: selectedEvent.title })} className="group relative overflow-hidden rounded-2xl border border-white/10 text-left">
+                    <img loading="lazy" src={photo} alt={`${selectedEvent.title} ${i + 1}`} className="h-[210px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all" />
                     <div className="absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/80 opacity-0 group-hover:opacity-100 transition-opacity">View full</div>
                   </button>
@@ -313,8 +333,31 @@ export default function BeatRushSite() {
 
       {selectedPhoto && (
         <div className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-8" onClick={() => setSelectedPhoto(null)}>
-          <button onClick={() => setSelectedPhoto(null)} className="absolute right-5 top-5 z-10 h-11 w-11 rounded-full bg-white text-black text-xl">×</button>
-          <img src={selectedPhoto.src} alt={selectedPhoto.alt} onClick={(e) => e.stopPropagation()} className="max-h-[92vh] max-w-[96vw] object-contain rounded-2xl border border-white/10 shadow-2xl" />
+          <button onClick={() => setSelectedPhoto(null)} className="absolute right-5 top-5 z-20 h-11 w-11 rounded-full bg-white text-black text-xl">×</button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const photos = selectedPhoto.photos || [];
+              const nextIndex = (selectedPhoto.index - 1 + photos.length) % photos.length;
+              setSelectedPhoto({ ...selectedPhoto, index: nextIndex, src: photos[nextIndex], alt: `${selectedPhoto.eventTitle} ${nextIndex + 1}` });
+            }}
+            className="absolute left-4 md:left-8 z-20 h-12 w-12 md:h-14 md:w-14 rounded-full border border-white/15 bg-white/10 text-white text-3xl backdrop-blur hover:bg-white/20 transition-all"
+            aria-label="Previous photo"
+          >‹</button>
+          <img loading="lazy" src={selectedPhoto.src} alt={selectedPhoto.alt} onClick={(e) => e.stopPropagation()} className="max-h-[92vh] max-w-[96vw] object-contain rounded-2xl border border-white/10 shadow-2xl" />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const photos = selectedPhoto.photos || [];
+              const nextIndex = (selectedPhoto.index + 1) % photos.length;
+              setSelectedPhoto({ ...selectedPhoto, index: nextIndex, src: photos[nextIndex], alt: `${selectedPhoto.eventTitle} ${nextIndex + 1}` });
+            }}
+            className="absolute right-4 md:right-8 z-20 h-12 w-12 md:h-14 md:w-14 rounded-full border border-white/15 bg-white/10 text-white text-3xl backdrop-blur hover:bg-white/20 transition-all"
+            aria-label="Next photo"
+          >›</button>
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-black/60 px-4 py-2 text-white/75 text-xs tracking-[0.16em] uppercase">
+            {selectedPhoto.index + 1} / {selectedPhoto.photos?.length || 1}
+          </div>
         </div>
       )}
     </div>
