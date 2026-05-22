@@ -60,7 +60,7 @@ const pastEvents = [
     tag: 'Launch night',
     image: 'thara-local.jpeg',
     highlight: 'The launch night that started the BeatRush movement.  Local brought Tamil, Malayalam and Telugu energy into one room at Colours Hoxton with DJ Roxzstar, sponsor support and a crowd that made our first event feel like a proper statement.',
-    photos: ['/Thara-local.jpeg', '/IMG_3806.PNG', '/IMG_3768.PNG', '/IMG_3803.PNG', '/IMG_3807.PNG', '/IMG_3813.PNG', '/IMG_3800.PNG', '/IMG_3812.PNG', '/IMG_3791.PNG', '/IMG_3785.PNG', '/IMG_3782.jpeg', '/IMG_3809.PNG', '/IMG_3810.PNG', '/IMG_3801.PNG', '/IMG_3814.PNG', '/IMG_3811.PNG', '/IMG_3783.PNG'],
+    photos: ['/thara-local.jpeg', '/IMG_3806.PNG', '/IMG_3768.PNG', '/IMG_3803.PNG', '/IMG_3807.PNG', '/IMG_3813.PNG', '/IMG_3800.PNG', '/IMG_3812.PNG', '/IMG_3791.PNG', '/IMG_3785.PNG', '/IMG_3782.jpeg', '/IMG_3809.PNG', '/IMG_3810.PNG', '/IMG_3801.PNG', '/IMG_3814.PNG', '/IMG_3811.PNG', '/IMG_3783.PNG'],
   },
   {
     title: 'Jolly O Gymkhana',
@@ -68,7 +68,7 @@ const pastEvents = [
     tag: 'Neon party',
     image: '/jolly-o-gymkhana.jpeg',
     highlight: 'Our ultimate neon night at The Cause London. Jolly O Gymkhana took the BeatRush crowd into a UV, glow and high energy club experience with DJ Roxzstar and DJ Julia delivering a full Tamil and Malayalam night.',
-    photos: ['/jolly-o-gymkhana.jpeg', '/File 1.JPEG', '/File 38.JPEG', '/File 4.JPG', '/File 35.JPEG', '/File 5.JPG', '/File 6.JPEG', '/File 10.JPEG', '/File 11.JPEG', '/File 12.JPEG', '/File 13.JPEG', '/File 38.JPEG', '/File 14.JPEG', '/File 15.JPEG', '/File 16.JPEG', '/File 17.JPEG', '/File 18.JPEG', '/File 8.JPEG', '/File 19.JPEG', '/File 20.JPEG', '/File 21.JPEG', '/File 7.JPEG', '/File 2.JPEG', '/File 22.JPEG', '/File 23.JPEG', '/File 24.JPEG', '/File 25.JPEG', '/File 3.JPEG', '/File 26.JPEG', '/File 9.JPEG', '/File 27.JPEG', '/File 28.JPEG', '/File 29.JPEG', '/File 30.JPEG', '/File 37.JPEG', '/File 31.JPEG', '/File 32.JPEG', '/File 33.JPEG', '/File 34.JPEG', '/File 36.JPEG',],
+    photos: ['/jolly-o-gymkhana.jpeg', '/File 1.JPEG', '/File 38.JPEG', '/File 4.JPEG', '/File 35.JPEG', '/File 5.JPEG', '/File 6.JPEG', '/File 10.JPEG', '/File 11.JPEG', '/File 12.JPEG', '/File 13.JPEG', '/File 38.JPEG', '/File 14.JPEG', '/File 15.JPEG', '/File 16.JPEG', '/File 17.JPEG', '/File 18.JPEG', '/File 8.JPEG', '/File 19.JPEG', '/File 20.JPEG', '/File 21.JPEG', '/File 7.JPEG', '/File 2.JPEG', '/File 22.JPEG', '/File 23.JPEG', '/File 24.JPEG', '/File 25.JPEG', '/File 3.JPEG', '/File 26.JPEG', '/File 9.JPEG', '/File 27.JPEG', '/File 28.JPEG', '/File 29.JPEG', '/File 30.JPEG', '/File 37.JPEG', '/File 31.JPEG', '/File 32.JPEG', '/File 33.JPEG', '/File 34.JPEG', '/File 36.JPEG',],
   },
   {
     title: 'Holiday Hangover',
@@ -76,7 +76,7 @@ const pastEvents = [
     tag: 'Boxing Day special',
     image: '/holiday-hangover.jpeg',
     highlight: 'Our Boxing Day Christmas crossover at Brixton Jamm. Holiday Hangover brought festive chaos, Tamil and Malayalam club energy, sponsor visibility and one of our strongest end of year crowds.',
-    photos: ['/holiday-hangover.jpeg', '/File 52.jpg', '/File 41.JPEG', '/File 63.JPEG', '/File 47.JPEG', '/File 58.jpg', '/File 44.JPEG', '/File 66.JPEG', '/File 50.jpg', '/File 61.JPEG', '/File 43.JPEG', '/File 67.JPEG', '/File 55.jpg', '/File 46.JPEG', '/File 64.JPEG', '/File 49.JPEG', '/File 57.jpg', '/File 42.JPEG', '/File 65.JPEG', '/File 53.jpg', '/File 62.JPEG', '/File 48.JPEG', '/File 56.jpg', '/File 45.JPEG', '/File 60.jpeg', '/File 51.jpg', '/File 54.jpg', '/File 59.jpg'],
+    photos: ['/holiday-hangover.jpeg', '/File 52.jpeg', '/File 41.JPEG', '/File 63.JPEG', '/File 47.JPEG', '/File 58.jpeg', '/File 44.JPEG', '/File 66.JPEG', '/File 50.jpeg', '/File 61.JPEG', '/File 43.JPEG', '/File 67.JPEG', '/File 55.jpeg', '/File 46.JPEG', '/File 64.JPEG', '/File 49.JPEG', '/File 57.jpeg', '/File 42.JPEG', '/File 65.JPEG', '/File 53.jpeg', '/File 62.JPEG', '/File 48.JPEG', '/File 56.jpeg', '/File 45.JPEG', '/File 60.jpeg', '/File 51.jpeg', '/File 54.jpeg', '/File 59.jpeg'],
   },
   {
     title: 'Love You Two',
@@ -84,7 +84,7 @@ const pastEvents = [
     tag: 'Valentine special',
     image: '/love-you-two.jpeg',
     highlight: 'Our Valentine special at Egg London. Love You Two was not just a couples night, it featured the first ever live surprise moment inside a DJ club event in London, creating a proper emotional BeatRush memory.',
-    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpg', '/File 85.jpg', '/File 77.jpg', '/File 94.jpg', '/File 72.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
+    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpeg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpeg', '/File 85.jpg', '/File 77.jpg', '/File 94.jpg', '/File 72.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
   },
   {
     title: 'Thames Kacheri',
