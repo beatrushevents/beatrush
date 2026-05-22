@@ -68,7 +68,7 @@ const pastEvents = [
     tag: 'Neon party',
     image: '/jolly-o-gymkhana.jpeg',
     highlight: 'Our ultimate neon night at The Cause London. Jolly O Gymkhana took the BeatRush crowd into a UV, glow and high energy club experience with DJ Roxzstar and DJ Julia delivering a full Tamil and Malayalam night.',
-    photos: ['/jolly-o-gymkhana.jpeg', '/File 1.JPEG', '/File 38.JPEG', '/File 4.JPEG', '/File 35.JPEG', '/File 5.JPEG', '/File 6.JPEG', '/File 10.JPEG', '/File 11.JPEG', '/File 12.JPEG', '/File 13.JPEG', '/File 38.JPEG', '/File 14.JPEG', '/File 15.JPEG', '/File 16.JPEG', '/File 17.JPEG', '/File 18.JPEG', '/File 8.JPEG', '/File 19.JPEG', '/File 20.JPEG', '/File 21.JPEG', '/File 7.JPEG', '/File 2.JPEG', '/File 22.JPEG', '/File 23.JPEG', '/File 24.JPEG', '/File 25.JPEG', '/File 3.JPEG', '/File 26.JPEG', '/File 9.JPEG', '/File 27.JPEG', '/File 28.JPEG', '/File 29.JPEG', '/File 30.JPEG', '/File 37.JPEG', '/File 31.JPEG', '/File 32.JPEG', '/File 33.JPEG', '/File 34.JPEG', '/File 36.JPEG',],
+    photos: ['/jolly-o-gymkhana.jpeg', '/File 1.JPEG', '/File 38.JPEG', '/File 4.jpeg', '/File 35.JPEG', '/File 5.jpeg', '/File 6.JPEG', '/File 10.JPEG', '/File 11.JPEG', '/File 12.JPEG', '/File 13.JPEG', '/File 38.JPEG', '/File 14.JPEG', '/File 15.JPEG', '/File 16.JPEG', '/File 17.JPEG', '/File 18.JPEG', '/File 8.JPEG', '/File 19.JPEG', '/File 20.JPEG', '/File 21.JPEG', '/File 7.JPEG', '/File 2.JPEG', '/File 22.JPEG', '/File 23.JPEG', '/File 24.JPEG', '/File 25.JPEG', '/File 3.JPEG', '/File 26.JPEG', '/File 9.JPEG', '/File 27.JPEG', '/File 28.JPEG', '/File 29.JPEG', '/File 30.JPEG', '/File 37.JPEG', '/File 31.JPEG', '/File 32.JPEG', '/File 33.JPEG', '/File 34.JPEG', '/File 36.JPEG',],
   },
   {
     title: 'Holiday Hangover',
@@ -258,7 +258,7 @@ export default function BeatRushSite() {
             <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="inline-block mt-8 rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold">Book Your Tickets</a>
           </div>
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03]">
-            <img loading="lazy" src="/thala-thalapathy.jpeg" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
+            <img loading="lazy" src="/thalaxthalap.jpeg" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
           </div>
         </div>
       </section>
