@@ -58,6 +58,9 @@ const pastEvents = [
     title: 'Thara Local',
     year: '2025',
     tag: 'Launch night',
+    venue: 'Colours Hoxton',
+    dj: 'DJ Roxzstar & DJ Thas',
+    attendance: '250+',
     image: 'thara-local.jpeg',
     highlight: 'The launch night that started the BeatRush movement.  Local brought Tamil, Malayalam and Telugu energy into one room at Colours Hoxton with DJ Roxzstar, sponsor support and a crowd that made our first event feel like a proper statement.',
     photos: ['/thara-local.jpeg', '/IMG_3806.PNG', '/IMG_3768.PNG', '/IMG_3803.PNG', '/IMG_3807.PNG', '/IMG_3813.PNG', '/IMG_3800.PNG', '/IMG_3812.PNG', '/IMG_3791.PNG', '/IMG_3785.PNG', '/IMG_3782.jpeg', '/IMG_3809.PNG', '/IMG_3810.PNG', '/IMG_3801.PNG', '/IMG_3814.PNG', '/IMG_3811.PNG', '/IMG_3783.PNG'],
@@ -66,14 +69,20 @@ const pastEvents = [
     title: 'Jolly O Gymkhana',
     year: '2025',
     tag: 'Neon party',
+    venue: 'The Cause',
+    dj: 'DJ Roxzstar & DJ Julix',
+    attendance: '250+',
     image: '/jolly-o-gymkhana.jpeg',
-    highlight: 'Our ultimate neon night at The Cause London. Jolly O Gymkhana took the BeatRush crowd into a UV, glow and high energy club experience with DJ Roxzstar and DJ Julia delivering a full Tamil and Malayalam night.',
+    highlight: 'Our ultimate neon night at The Cause London. Jolly O Gymkhana took the BeatRush crowd into a UV, glow and high energy club experience with DJ Roxzstar and DJ Julix delivering a full Tamil and Malayalam night.',
     photos: ['/jolly-o-gymkhana.jpeg', '/File 1.JPEG', '/File 38.JPEG', '/b1.jpeg', '/File 35.JPEG', '/File 5.jpeg', '/File 6.JPEG', '/File 10.JPEG', '/File 11.JPEG', '/File 12.JPEG', '/File 13.JPEG', '/File 38.JPEG', '/File 14.JPEG', '/File 15.JPEG', '/File 16.JPEG', '/File 17.JPEG', '/File 18.JPEG', '/File 8.JPEG', '/File 19.JPEG', '/File 20.JPEG', '/File 21.JPEG', '/File 7.JPEG', '/File 2.JPEG', '/File 22.JPEG', '/File 23.JPEG', '/File 24.JPEG', '/File 25.JPEG', '/File 3.JPEG', '/File 26.JPEG', '/File 9.JPEG', '/File 27.JPEG', '/File 28.JPEG', '/File 29.JPEG', '/File 30.JPEG', '/File 37.JPEG', '/File 31.JPEG', '/File 32.JPEG', '/File 33.JPEG', '/File 34.JPEG', '/File 36.JPEG',],
   },
   {
     title: 'Holiday Hangover',
     year: '2025',
     tag: 'Boxing Day special',
+    venue: 'Brixton Jamm',
+    dj: 'DJ Roxzstar & HL Mix',
+    attendance: '350+',
     image: '/holiday-hangover.jpeg',
     highlight: 'Our Boxing Day Christmas crossover at Brixton Jamm. Holiday Hangover brought festive chaos, Tamil and Malayalam club energy, sponsor visibility and one of our strongest end of year crowds.',
     photos: ['/holiday-hangover.jpeg', '/File 52.jpeg', '/File 41.JPEG', '/File 63.JPEG', '/File 47.JPEG', '/File 58.jpeg', '/File 44.JPEG', '/File 66.JPEG', '/File 50.jpeg', '/File 61.JPEG', '/File 43.JPEG', '/File 67.JPEG', '/File 55.jpeg', '/File 46.JPEG', '/File 64.JPEG', '/File 49.JPEG', '/File 57.jpeg', '/File 42.JPEG', '/File 65.JPEG', '/File 53.jpeg', '/File 62.JPEG', '/File 48.JPEG', '/File 56.jpeg', '/File 45.JPEG', '/File 51.jpeg', '/File 54.jpeg', '/File 59.jpeg'],
@@ -82,6 +91,9 @@ const pastEvents = [
     title: 'Love You Two',
     year: '2026',
     tag: 'Valentine special',
+    venue: 'Egg London',
+    dj: 'DJ Papz, HL Mix & DJ Roxzstar',
+    attendance: '250+',
     image: '/love-you-two.jpeg',
     highlight: 'Our Valentine special at Egg London. Love You Two was not just a couples night, it featured the first ever live surprise moment inside a DJ club event in London, creating a proper emotional BeatRush memory.',
     photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpeg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpeg', '/File 85.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
@@ -90,6 +102,9 @@ const pastEvents = [
     title: 'Thames Kacheri',
     year: '2026',
     tag: 'Neon boat party',
+    venue: 'Blackfriars Pier',
+    dj: 'DJ Roxzstar & DJ Dinesh',
+    attendance: '600+',
     image: '/thames-kacheri.jpeg',
     highlight: 'London’s first South Indian neon boat party. The first boat sold out, demand pushed us to add a second boat, and BeatRush became the first London promoter to host two boats for the same South Indian event with 600+ people across the Thames.',
     photos: ['/thames-kacheri.jpeg', '/File 104.JPEG', '/File 117.JPEG', '/File 101.JPEG', '/File 129.JPEG', '/File 110.JPEG', '/File 123.JPEG', '/File 106.JPEG', '/File 132.JPEG', '/File 115.JPEG', '/File 100.JPEG', '/File 126.JPEG', '/File 108.JPEG', '/File 120.JPEG', '/File 103.JPEG', '/File 131.JPEG', '/File 112.JPEG', '/File 124.JPEG', '/File 107.JPEG', '/File 119.JPEG', '/File 102.JPEG', '/File 128.JPEG', '/File 111.JPEG', '/File 121.JPEG', '/File 105.JPEG', '/File 130.JPEG', '/File 114.JPEG', '/File 125.JPEG', '/File 109.JPEG', '/File 122.JPEG', '/File 116.JPEG', '/File 127.JPEG', '/File 113.JPEG', '/File 118.JPEG'],
@@ -315,6 +330,20 @@ export default function BeatRushSite() {
               <div className="lg:col-span-1">
                 <h3 className="text-white text-2xl mb-4" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic' }}>EVENT HIGHLIGHTS</h3>
                 <p className="text-white/65 text-[14px] leading-[1.8]">{selectedEvent.highlight}</p>
+                <div className="mt-6 space-y-3">
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <p className="text-[10px] tracking-[0.32em] uppercase text-white/35 mb-1">Venue</p>
+                    <p className="text-white text-[15px]">{selectedEvent.venue}</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <p className="text-[10px] tracking-[0.32em] uppercase text-white/35 mb-1">DJ</p>
+                    <p className="text-white text-[15px]">{selectedEvent.dj}</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <p className="text-[10px] tracking-[0.32em] uppercase text-white/35 mb-1">Attendance</p>
+                    <p className="text-white text-[15px]">{selectedEvent.attendance}</p>
+                  </div>
+                </div>
               </div>
               <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {selectedEvent.photos.map((photo, i) => photo ? (
