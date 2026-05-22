@@ -76,7 +76,7 @@ const pastEvents = [
     tag: 'Boxing Day special',
     image: '/holiday-hangover.jpeg',
     highlight: 'Our Boxing Day Christmas crossover at Brixton Jamm. Holiday Hangover brought festive chaos, Tamil and Malayalam club energy, sponsor visibility and one of our strongest end of year crowds.',
-    photos: ['/holiday-hangover.jpeg', '/File 52.jpeg', '/File 41.JPEG', '/File 63.JPEG', '/File 47.JPEG', '/File 58.jpeg', '/File 44.JPEG', '/File 66.JPEG', '/File 50.jpeg', '/File 61.JPEG', '/File 43.JPEG', '/File 67.JPEG', '/File 55.jpeg', '/File 46.JPEG', '/File 64.JPEG', '/File 49.JPEG', '/File 57.jpeg', '/File 42.JPEG', '/File 65.JPEG', '/File 53.jpeg', '/File 62.JPEG', '/File 48.JPEG', '/File 56.jpeg', '/File 45.JPEG', '/File 60.jpeg', '/File 51.jpeg', '/File 54.jpeg', '/File 59.jpeg'],
+    photos: ['/holiday-hangover.jpeg', '/File 52.jpeg', '/File 41.JPEG', '/File 63.JPEG', '/File 47.JPEG', '/File 58.jpeg', '/File 44.JPEG', '/File 66.JPEG', '/File 50.jpeg', '/File 61.JPEG', '/File 43.JPEG', '/File 67.JPEG', '/File 55.jpeg', '/File 46.JPEG', '/File 64.JPEG', '/File 49.JPEG', '/File 57.jpeg', '/File 42.JPEG', '/File 65.JPEG', '/File 53.jpeg', '/File 62.JPEG', '/File 48.JPEG', '/File 56.jpeg', '/File 45.JPEG', '/File 51.jpeg', '/File 54.jpeg', '/File 59.jpeg'],
   },
   {
     title: 'Love You Two',
@@ -84,7 +84,7 @@ const pastEvents = [
     tag: 'Valentine special',
     image: '/love-you-two.jpeg',
     highlight: 'Our Valentine special at Egg London. Love You Two was not just a couples night, it featured the first ever live surprise moment inside a DJ club event in London, creating a proper emotional BeatRush memory.',
-    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpeg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpeg', '/File 85.jpg', '/File 77.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
+    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpeg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpeg', '/File 85.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
   },
   {
     title: 'Thames Kacheri',
