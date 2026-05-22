@@ -84,7 +84,7 @@ const pastEvents = [
     tag: 'Valentine special',
     image: '/love-you-two.jpeg',
     highlight: 'Our Valentine special at Egg London. Love You Two was not just a couples night, it featured the first ever live surprise moment inside a DJ club event in London, creating a proper emotional BeatRush memory.',
-    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpeg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpeg', '/File 85.jpg', '/File 77.jpg', '/File 94.jpg', '/File 72.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
+    photos: ['/love-you-two.jpeg','/File 84.jpg', '/File 71.jpg', '/File 93.jpg', '/File 76.jpg', '/File 88.jpg', '/File 74.jpg', '/File 95.jpeg', '/File 80.jpg', '/File 70.jpg', '/File 91.jpg', '/File 73.jpg', '/File 96.jpeg', '/File 85.jpg', '/File 77.jpg', '/b2.jpg', '/File 72.jpg', '/File 89.jpg', '/File 75.jpg', '/File 92.jpg', '/File 81.jpg', '/File 78.jpg', '/File 90.jpg', '/File 79.jpg', '/File 87.jpg', '/File 82.jpg', '/File 86.jpg', '/File 83.jpg'],
   },
   {
     title: 'Thames Kacheri',
