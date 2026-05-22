@@ -223,7 +223,7 @@ export default function BeatRushSite() {
           <div className="mb-14 md:mb-20 text-center">
             <p className={`reveal ${eventsInView ? 'in' : ''} text-[11px] tracking-[0.5em] uppercase text-white/45 mb-5`}>Our journey so far</p>
             <h2 className={`reveal ${eventsInView ? 'in' : ''} text-white`} style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(3rem, 7vw, 6rem)', lineHeight: .95 }}>PAST EVENTS</h2>
-            <p className={`reveal ${eventsInView ? 'in' : ''} mt-6 text-white/55 text-[14px] max-w-xl mx-auto leading-relaxed`}>Click any event showpiece to open its album area. You can replace the placeholder images later with multiple pictures from that event.</p>
+            <p className={`reveal ${eventsInView ? 'in' : ''} mt-6 text-white/55 text-[14px] max-w-xl mx-auto leading-relaxed`}>Click any event showpiece to open its album area.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 md:gap-5">
