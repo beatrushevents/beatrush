@@ -130,6 +130,30 @@ export default function BeatRushSite() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const videoRef = useRef(null);
 
+const handleCheckout = async (ticketType) => {
+  const res = await fetch('/api/checkout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ ticketType }),
+  });
+
+  const text = await res.text();
+
+  try {
+    const data = JSON.parse(text);
+
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert(data.error || 'Checkout failed');
+    }
+  } catch {
+    console.error(text);
+    alert('Checkout route failed. Check Terminal for the real error.');
+  }
+};
   const setCineRefs = (el) => {
     cineSectionRef.current = el;
     cineRevealRef.current = el;
@@ -177,8 +201,12 @@ export default function BeatRushSite() {
               <a key={item} href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="px-4 py-2 text-[13px] rounded-full text-white/65 hover:text-white hover:bg-white/[0.06] transition-all">{item}</a>
             ))}
           </div>
-          <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="rounded-full bg-white text-black px-5 md:px-6 py-2.5 text-[12px] tracking-[0.12em] uppercase font-semibold hover:bg-white/90 transition-all">Book Now</a>
-        </nav>
+<button
+  onClick={() => handleCheckout('general')}
+  className="inline-block mt-8 rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold"
+>
+  Book Your Tickets
+</button>        </nav>
 
         <div className="absolute inset-0 z-10 sky-flash bg-white pointer-events-none" />
         <Bolt glow className="thunder-hit absolute z-10 right-[8%] top-[18%] h-[52vh] max-h-[620px] min-h-[320px] w-auto opacity-80 pointer-events-none" />
@@ -192,8 +220,12 @@ export default function BeatRushSite() {
             South Indian club nights, cinematic production, viral crowd energy and events that feel like home, but louder.
           </p>
           <div className="fade-up delay-4 mt-9 flex flex-col sm:flex-row items-start justify-center gap-4">
-            <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold hover:scale-[1.03] transition-all">Book Now</a>
-            <a href="#past-events" className="rounded-full border border-white/15 px-8 py-3 text-[12px] tracking-[0.18em] uppercase text-white/75 hover:text-white hover:border-white/40 transition-all">Past Events</a>
+<button
+  onClick={() => handleCheckout('general')}
+  className="rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold hover:scale-[1.03] transition-all"
+>
+  Book Now
+</button>            <a href="#past-events" className="rounded-full border border-white/15 px-8 py-3 text-[12px] tracking-[0.18em] uppercase text-white/75 hover:text-white hover:border-white/40 transition-all">Past Events</a>
           </div>
         </div>
 
@@ -269,10 +301,14 @@ export default function BeatRushSite() {
               <p><span style={{ color: GOLD }}>Time:</span> 11PM onwards</p>
               <p><span style={{ color: GOLD }}>Venue:</span> Brixton Jamm, 261 Brixton Road, London SW9 6LH</p>
             </div>
-            <a href={FATSOMA_URL} target="_blank" rel="noreferrer" className="inline-block mt-8 rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold">Book Your Tickets</a>
-          </div>
+<button
+  onClick={() => handleCheckout('general')}
+  className="rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold hover:scale-[1.03] transition-all"
+>
+  Book Now
+</button>          </div>
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03]">
-            <img loading="lazy" src="/thalaxthalap.jpeg" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
+            <img loading="lazy" src="/TxT.PNG" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
           </div>
         </div>
       </section>
