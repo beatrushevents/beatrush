@@ -1,13 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function CheckInPage() {
   const [reference, setReference] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  async function handleCheckIn() {
+  async function handleCheckIn(refFromUrl) {
+    const finalReference = refFromUrl || reference;
+
+    if (!finalReference) {
+      setResult({ error: 'Please enter a ticket reference' });
+      return;
+    }
+
     setLoading(true);
     setResult(null);
 
@@ -19,16 +26,27 @@ export default function CheckInPage() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        reference,
+        reference: finalReference.trim(),
         key,
       }),
     });
 
     const data = await res.json();
 
+    setReference(finalReference.trim());
     setResult(data);
     setLoading(false);
   }
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+
+    if (ref) {
+      setReference(ref);
+      handleCheckIn(ref);
+    }
+  }, []);
 
   return (
     <main
@@ -43,6 +61,10 @@ export default function CheckInPage() {
       <h1 style={{ color: '#D4AF37' }}>
         BeatRush Check In
       </h1>
+
+      <p style={{ color: '#aaa', maxWidth: 520 }}>
+        Scan a ticket QR or enter the ticket reference manually.
+      </p>
 
       <input
         value={reference}
@@ -61,7 +83,7 @@ export default function CheckInPage() {
       <br />
 
       <button
-        onClick={handleCheckIn}
+        onClick={() => handleCheckIn()}
         disabled={loading}
         style={{
           marginTop: 16,
@@ -84,6 +106,7 @@ export default function CheckInPage() {
             padding: 20,
             border: '1px solid #333',
             borderRadius: 12,
+            maxWidth: 520,
           }}
         >
           {result.error && (
@@ -97,9 +120,10 @@ export default function CheckInPage() {
               <h2 style={{ color: '#f59e0b' }}>
                 Already Used
               </h2>
-              <p>{result.ticket.customer_name}</p>
-              <p>{result.ticket.reference}</p>
-              <p>{result.ticket.used_at}</p>
+              <p><strong>Name:</strong> {result.ticket.customer_name}</p>
+              <p><strong>Reference:</strong> {result.ticket.reference}</p>
+              <p><strong>Ticket:</strong> {result.ticket.ticket_option}</p>
+              <p><strong>Used at:</strong> {result.ticket.used_at}</p>
             </>
           )}
 
@@ -108,9 +132,10 @@ export default function CheckInPage() {
               <h2 style={{ color: '#22c55e' }}>
                 Check In Successful
               </h2>
-              <p>{result.ticket.customer_name}</p>
-              <p>{result.ticket.reference}</p>
-              <p>{result.ticket.ticket_option}</p>
+              <p><strong>Name:</strong> {result.ticket.customer_name}</p>
+              <p><strong>Reference:</strong> {result.ticket.reference}</p>
+              <p><strong>Ticket:</strong> {result.ticket.ticket_option}</p>
+              <p><strong>Status:</strong> {result.ticket.status}</p>
             </>
           )}
         </div>
