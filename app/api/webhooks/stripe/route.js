@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 import { headers } from 'next/headers';
-import { getSupabaseAdmin } from '@/lib/supabaseAdmin';
+import { createClient } from '@supabase/supabase-js';
 import { createTicketReference, EVENT_DETAILS } from '@/lib/ticketConfig';
 import { sendTicketEmail } from '@/lib/ticketEmail';
 
@@ -27,7 +27,16 @@ export async function POST(request) {
     const session = event.data.object;
 
     try {
-      const supabase = getSupabaseAdmin();
+      const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL,
+        process.env.SUPABASE_SERVICE_ROLE_KEY,
+        {
+          auth: {
+            persistSession: false,
+          },
+        }
+      );
+
       const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 10 });
       const quantity = lineItems.data.reduce((sum, item) => sum + (item.quantity || 1), 0) || 1;
 
@@ -52,12 +61,18 @@ export async function POST(request) {
       }));
 
       const { error } = await supabase.from('tickets').insert(tickets);
-      if (error) throw error;
+
+      if (error) {
+        throw error;
+      }
 
       await sendTicketEmail({ to: email, name, tickets });
     } catch (error) {
       console.error('Ticket generation failed:', error);
-      return Response.json({ received: true, ticketError: error.message }, { status: 200 });
+      return Response.json(
+        { received: true, ticketError: error.message },
+        { status: 200 }
+      );
     }
   }
 
