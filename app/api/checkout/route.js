@@ -37,6 +37,11 @@ export async function POST(request) {
             unit_amount: EVENT.price,
           },
           quantity: safeQuantity,
+          adjustable_quantity: {
+            enabled: true,
+            minimum: 1,
+            maximum: 10,
+          },
         },
       ],
       metadata: {

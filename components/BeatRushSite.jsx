@@ -265,30 +265,6 @@ const handleCheckout = async (ticketType) => {
         </div>
       </section>
 
-      <section id="past-events" ref={eventsRef} className="relative bg-black py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="mb-14 md:mb-20 text-center">
-            <p className={`reveal ${eventsInView ? 'in' : ''} text-[11px] tracking-[0.5em] uppercase text-white/45 mb-5`}>Our journey so far</p>
-            <h2 className={`reveal ${eventsInView ? 'in' : ''} text-white`} style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(3rem, 7vw, 6rem)', lineHeight: .95 }}>PAST EVENTS</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 md:gap-5">
-            {pastEvents.map((event, index) => (
-              <button key={event.title} onClick={() => setSelectedEvent(event)} className={`event-card reveal ${eventsInView ? 'in' : ''} group text-left relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] min-h-[390px] hover:border-white/30 transition-all`} style={{ transitionDelay: `${index * .08}s` }}>
-                {event.image ? <img loading="lazy" src={event.image} alt={event.title} className="event-photo absolute inset-0 h-full w-full object-cover opacity-70" /> : <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 90% 70% at 50% 20%, rgba(212,175,55,.22), transparent 58%), linear-gradient(180deg,#111,#030303)` }} />}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/10" />
-                <div className="absolute top-5 left-5 rounded-full border border-white/15 bg-black/35 px-3 py-1 text-[10px] tracking-[0.25em] uppercase text-white/65">{event.year}</div>
-                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                  <p className="text-[10px] tracking-[0.35em] uppercase mb-3" style={{ color: GOLD }}>{event.tag}</p>
-                  <h3 className="text-white leading-[.95]" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(2.1rem, 3vw, 3.2rem)' }}>{event.title}</h3>
-                  <p className="mt-4 text-white/55 text-[12px] leading-relaxed">Open album →</p>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="upcoming-events" className="relative bg-black py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14 border-t border-white/10">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
@@ -309,6 +285,30 @@ const handleCheckout = async (ticketType) => {
 </button>          </div>
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03]">
             <img loading="lazy" src="/TxT.PNG" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section id="past-events" ref={eventsRef} className="relative bg-black py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="mb-14 md:mb-20 text-center">
+            <p className={`reveal ${eventsInView ? 'in' : ''} text-[11px] tracking-[0.5em] uppercase text-white/45 mb-5`}>Our journey so far</p>
+            <h2 className={`reveal ${eventsInView ? 'in' : ''} text-white`} style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(3rem, 7vw, 6rem)', lineHeight: .95 }}>PAST EVENTS</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 md:gap-5">
+            {pastEvents.map((event, index) => (
+              <button key={event.title} onClick={() => setSelectedEvent(event)} className={`event-card reveal ${eventsInView ? 'in' : ''} group text-left relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] min-h-[390px] hover:border-white/30 transition-all`} style={{ transitionDelay: `${index * .08}s` }}>
+                {event.image ? <img loading="lazy" src={event.image} alt={event.title} className="event-photo absolute inset-0 h-full w-full object-cover opacity-70" /> : <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 90% 70% at 50% 20%, rgba(212,175,55,.22), transparent 58%), linear-gradient(180deg,#111,#030303)` }} />}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/10" />
+                <div className="absolute top-5 left-5 rounded-full border border-white/15 bg-black/35 px-3 py-1 text-[10px] tracking-[0.25em] uppercase text-white/65">{event.year}</div>
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <p className="text-[10px] tracking-[0.35em] uppercase mb-3" style={{ color: GOLD }}>{event.tag}</p>
+                  <h3 className="text-white leading-[.95]" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(2.1rem, 3vw, 3.2rem)' }}>{event.title}</h3>
+                  <p className="mt-4 text-white/55 text-[12px] leading-relaxed">Open album →</p>
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </section>
