@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const EVENT = {
   name: 'Thala X Thalapathy - BeatRush Events',
   ticketName: 'General Ticket',
-  price: 1000,
+  price: 1299,
   currency: 'gbp',
 };
 
