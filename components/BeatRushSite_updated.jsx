@@ -109,6 +109,27 @@ const pastEvents = [
     highlight: 'London’s first South Indian neon boat party. The first boat sold out, demand pushed us to add a second boat, and BeatRush became the first London promoter to host two boats for the same South Indian event with 600+ people across the Thames.',
     photos: ['/thames-kacheri.jpeg', '/File 104.JPEG', '/File 117.JPEG', '/File 101.JPEG', '/File 129.JPEG', '/File 110.JPEG', '/File 123.JPEG', '/File 106.JPEG', '/File 132.JPEG', '/File 115.JPEG', '/File 100.JPEG', '/File 126.JPEG', '/File 108.JPEG', '/File 120.JPEG', '/File 103.JPEG', '/File 131.JPEG', '/File 112.JPEG', '/File 124.JPEG', '/File 107.JPEG', '/File 119.JPEG', '/File 102.JPEG', '/File 128.JPEG', '/File 111.JPEG', '/File 121.JPEG', '/File 105.JPEG', '/File 130.JPEG', '/File 114.JPEG', '/File 125.JPEG', '/File 109.JPEG', '/File 122.JPEG', '/File 116.JPEG', '/File 127.JPEG', '/File 113.JPEG', '/File 118.JPEG'],
   },
+  {
+    title: 'Thala X Thalapathy',
+    year: '2026',
+    tag: 'One Last Ride',
+    venue: 'Brixton Jamm',
+    dj: 'DJ Roxzstar, DJ Papz & HL Mix',
+    attendance: '350+',
+    image: '/events/thala-thalapathy/thala-thalapathy-01.jpg',
+    highlight: 'A full Tamil cinema celebration for Thala and Thalapathy fans in London. One Last Ride brought mass anthems, nostalgia, flags, fan energy and the BeatRush crowd together at Brixton Jamm.',
+    photos: [
+      '/events/thala-thalapathy/thala-thalapathy-01.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-02.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-03.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-04.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-05.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-06.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-07.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-08.jpg',
+      '/events/thala-thalapathy/thala-thalapathy-09.jpg',
+    ],
+  },
 ];
 
 const PhotoPlaceholder = ({ label = 'Upload Photo' }) => (
@@ -269,22 +290,30 @@ const handleCheckout = async (ticketType) => {
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             <p className="text-[11px] tracking-[0.5em] uppercase mb-5" style={{ color: GOLD }}>Next drop</p>
-            <h2 className="text-white leading-[.95] mb-6" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(3rem, 7vw, 6rem)' }}>UPCOMING<br />EVENTS</h2>
-            <h3 className="text-white text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic' }}>Thala <span style={{ color: GOLD }}>×</span> Thalapathy</h3>
-            <p className="text-white/65 leading-relaxed max-w-xl">A celebration of two legends, built for Tamil and Mallu crowd energy. One night of Thala hits, Thalapathy hits, mass anthems and pure nostalgia at Brixton Jamm.</p>
-            <div className="mt-7 grid gap-3 text-white/75 text-[14px]">
-              <p><span style={{ color: GOLD }}>Date:</span> June 20, 2026</p>
-              <p><span style={{ color: GOLD }}>Time:</span> 11PM onwards</p>
-              <p><span style={{ color: GOLD }}>Venue:</span> Brixton Jamm, 261 Brixton Road, London SW9 6LH</p>
+            <h2 className="text-white leading-[.95] mb-6" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic', fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
+              UPCOMING<br />EVENTS
+            </h2>
+
+            <h3 className="text-white text-5xl md:text-7xl mb-4" style={{ fontFamily: "'Anton', sans-serif", fontStyle: 'italic' }}>
+              #BR07
+            </h3>
+
+            <p className="text-white/65 leading-relaxed max-w-xl">
+              The next BeatRush drop is loading. Second artist unveiling soon.
+            </p>
+
+            <div className="mt-8 inline-block rounded-full border border-white/15 px-8 py-3 text-[12px] tracking-[0.18em] uppercase text-white/70">
+              Unveiling Soon
             </div>
-<button
-  onClick={() => handleCheckout('general')}
-  className="rounded-full bg-white text-black px-8 py-3 text-[12px] tracking-[0.18em] uppercase font-semibold hover:scale-[1.03] transition-all"
->
-  Book Now
-</button>          </div>
+          </div>
+
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-white/[0.03]">
-            <img loading="lazy" src="/TxT.PNG" alt="Thala x Thalapathy" className="absolute inset-0 h-full w-full object-cover" />
+            <img
+              loading="lazy"
+              src="/events/br07/br07-teaser.jpg"
+              alt="#BR07"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           </div>
         </div>
       </section>
