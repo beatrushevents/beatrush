@@ -116,7 +116,7 @@ const pastEvents = [
     venue: 'Brixton Jamm',
     dj: 'DJ Roxzstar, DJ Thas',
     attendance: '300+',
-    image: '/events/thala-thalapathy/thala-thalapathy-01.jpg',
+    image:  '/events/thala-thalapathy/TxT.PNG',
     highlight: 'A full Tamil cinema celebration for Thala and Thalapathy fans in London. One Last Ride brought mass anthems, nostalgia, flags, fan energy and the BeatRush crowd together at Brixton Jamm.',
     photos: [
       '/events/thala-thalapathy/TxT.PNG',
