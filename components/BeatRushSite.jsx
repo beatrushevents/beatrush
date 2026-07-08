@@ -300,7 +300,7 @@ const handleCheckout = async (ticketType) => {
             </h3>
 
             <p className="text-white/65 leading-relaxed max-w-xl">
-              The next BeatRush drop is loading. Second artist unveiling soon.
+              The next BeatRush drop is loading. Anniversary Edition Blast. Not your regular party. 
             </p>
 
             <div className="mt-8 inline-block rounded-full border border-white/15 px-8 py-3 text-[12px] tracking-[0.18em] uppercase text-white/70">
